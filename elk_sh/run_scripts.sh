@@ -30,4 +30,6 @@ sleep 45
 
 # Print the Kibana URL home page
 my_ip_addr=$(ip -o -4 addr show $(ip route get 8.8.8.8 | awk '{print $5; exit}') | awk '{print $4}' | cut -d '/' -f 1)
+echo
+echo
 echo "http://$my_ip_addr:5601/app/home#/"
