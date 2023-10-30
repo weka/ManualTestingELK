@@ -37,11 +37,8 @@ cd ~/ManualTestingELK
 ---
 
 ### Debugging (From Remote Server):
-#### Debug commands:
+#### Check if elasticsearch is up:
 ```
-curl -X GET "http://localhost:9200/"
-```
-or
 ```
 my_ip_addr=$(ip -o -4 addr show $(ip route get 8.8.8.8 | awk '{print $5; exit}') | awk '{print $4}' | cut -d '/' -f 1)
 curl -X GET "http://$my_ip_addr:9200/"
