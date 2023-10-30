@@ -25,7 +25,7 @@
 
 # Run the "upload_saved_object_template" script
 # chmod +x ~/elk_sh/upload_saved_object_template.sh
-sleep 15
+sleep 45
 ./elk_sh/upload_saved_object_template.sh
 
 # Print the Kibana URL home page
