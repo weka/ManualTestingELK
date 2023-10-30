@@ -1,0 +1,27 @@
+=== Instructions ===
+
+From Local Laptop:
+==================
+step 1:
+-------
+scp -r "/Users/avi.zaguri/Documents/Text Editor/Databases/ELK/elk_sh/" "ELK-ManualTest-1:~/"
+
+
+step 2:
+-------
+pdsh -R ssh -w 'ELK-ManualTest-1' "chmod -R +x ~/elk_sh/"
+
+
+From Remote Server:
+===================
+step 1:
+-------
+./elk_sh/run_scripts.sh
+
+
+step 2:
+-------
+curl -X GET "http://localhost:9200/"
+
+my_ip_addr=$(ip -o -4 addr show $(ip route get 8.8.8.8 | awk '{print $5; exit}') | awk '{print $4}' | cut -d '/' -f 1)
+curl -X GET "http://$my_ip_addr:9200/"
