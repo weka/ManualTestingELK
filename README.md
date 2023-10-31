@@ -32,6 +32,12 @@ cd ~/ManualTestingELK
 ./elk_sh/run_scripts.sh
 ```
 
+###
+#### Step 3 - enter into the Kibana URL:
+```
+http://<HOSTNAME>:5601
+```
+
 #
 
 ---
