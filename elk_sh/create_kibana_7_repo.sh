@@ -5,6 +5,9 @@
 # ./create_kibana_7_repo.sh
 
 
+echo create_kibana_7_repo.sh
+
+
 # Check if the script is run with root privileges
 if [[ $EUID -ne 0 ]]; then
     echo "This script must be run as root (with sudo)." 1>&2

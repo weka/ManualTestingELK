@@ -4,6 +4,8 @@
 # chmod +x create_elasticsearch_7_repo.sh
 # ./create_elasticsearch_7_repo.sh
 
+echo create_elasticsearch_7_repo.sh
+
 
 # Check if the script is run with root privileges
 if [[ $EUID -ne 0 ]]; then
