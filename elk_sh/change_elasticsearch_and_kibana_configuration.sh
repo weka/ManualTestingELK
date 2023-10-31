@@ -23,6 +23,8 @@ sudo systemctl start kibana
 
 # Check Elasticsearch and Kibana Status
 echo Check Elasticsearch and Kibana Status
-sudo systemctl status elasticsearch
+#sudo systemctl status elasticsearch
+systemctl status elasticsearch | tail -n+1
 curl -X GET "http://$my_ip_addr:9200/"
-sudo systemctl status kibana
+#sudo systemctl status kibana
+sudo systemctl status kibana | tail -n+1
